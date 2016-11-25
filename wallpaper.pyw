@@ -6,15 +6,16 @@ import urllib.request
 from ctypes import windll
 
 
-#Approved subreddits to get pics from
-approved_subs = ['spaceporn', 'earthporn']
+#Approved subreddits to get pics from, just add subreddits to the array
+#ex. ['spaceporn', 'earthporn']
+approved_subs = []
 #Subreddit to get wallpapers from
 subreddit = approved_subs[randrange(0, len(approved_subs))]
 #Collects current date and stores it in the format month.day.year
 date_today = datetime.now()
 date_today = str(date_today.month) + "." + str(date_today.day) + "." + str(date_today.year)
 #Folder where the wallpapers will be saved an located
-wallpaper_folder = "C:/Users/wito7/Desktop/Wallpapers/"
+wallpaper_folder = ""
 #Creates a final folder path from the file name, directory, and .jpg extension
 wallpaper_location = wallpaper_folder + date_today + ".jpg"
 
